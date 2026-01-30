@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ル・クレア・プロパティマネジメント合同会社</title>
-	<meta name="description" content="八王子市追分町のル・クレア・プロパティマネジメント合同会社。賃貸管理、室内クリーニング、WEB面談・オンライン契約に対応。確かな管理で資産価値を高めます。">
-	<meta name="keywords" content="ル・クレア,プロパティマネジメント,八王子,賃貸管理,不動産管理">
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>ル・クレア・プロパティマネジメント合同会社 | 八王子市の不動産賃貸管理</title>
+    <meta name="description" content="東京都八王子市追分町の不動産管理会社。ル・クレア・プロパティマネジメント合同会社は、地域密着の賃貸管理、室内クリーニング、WEB面談、オンライン契約に対応。オーナー様の資産価値向上をサポートします。">
+    <meta name="keywords" content="ル・クレア,プロパティマネジメント,八王子市,追分町,不動産管理,賃貸管理,WEB面談">
+    
+    <meta property="og:title" content="ル・クレア・プロパティマネジメント合同会社">
+    <meta property="og:description" content="確かな管理で、資産の未来を創る。八王子市の不動産管理・賃貸管理。">
+    <meta property="og:type" content="website">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
         /* --- デザイン設定 (CSS) --- */
@@ -18,7 +24,6 @@
             --header-height: 120px;
         }
 
-        /* 全体リセット */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body {
@@ -29,7 +34,7 @@
             background-color: #fff;
         }
 
-        /* --- 上段固定ヘッダー（スクロールしても絶対に見えなくなりません） --- */
+        /* 上段固定ヘッダー */
         header {
             position: fixed;
             top: 0;
@@ -75,7 +80,6 @@
             border-radius: 4px;
         }
 
-        /* メニューバー */
         .header-nav ul {
             display: flex;
             justify-content: center;
@@ -93,7 +97,6 @@
         }
         .header-nav a:hover { color: var(--gold); }
 
-        /* お問い合わせボタン */
         .contact-btn {
             background-color: var(--navy);
             color: #fff !important;
@@ -101,7 +104,7 @@
             border-radius: 4px;
         }
 
-        /* --- メインビジュアル --- */
+        /* ヒーローセクション */
         .hero {
             height: 450px;
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
@@ -114,11 +117,11 @@
         }
         .hero h2 {
             font-family: 'Noto Serif JP', serif;
-            font-size: 42px;
+            font-size: clamp(24px, 5vw, 42px);
             letter-spacing: 0.1em;
         }
 
-        /* --- 各セクション設定 --- */
+        /* コンテンツ共通 */
         section { padding: 80px 20px; }
         .container { max-width: 1000px; margin: 0 auto; }
         .bg-light { background-color: var(--bg-light); }
@@ -130,12 +133,10 @@
             color: var(--navy);
         }
 
-        /* 横並びレイアウト */
-        .flex-box { display: flex; gap: 40px; align-items: center; }
-        .flex-box img { width: 50%; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .reverse { flex-direction: row-reverse; }
+        .flex-box { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; }
+        .flex-box img { width: 100%; max-width: 480px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .flex-text { flex: 1; min-width: 300px; }
 
-        /* グリッドレイアウト（ご利用の流れ） */
         .grid-box {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -153,30 +154,42 @@
         }
         .card img { width: 100%; height: 180px; object-fit: cover; margin-bottom: 10px; }
 
-        /* テーブル */
         table { width: 100%; border-collapse: collapse; background: #fff; }
         th, td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
         th { width: 30%; color: var(--navy); background: #fdfdfd; }
 
-        /* お問い合わせフォーム */
+        /* お問い合わせフォーム（Googleフォーム埋め込み対応） */
         .contact-form-wrapper {
-            max-width: 650px;
+            max-width: 800px;
             margin: 0 auto;
             background: #fff;
-            padding: 40px;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
         }
-        .form-group { margin-bottom: 20px; }
-        .form-label { display: block; font-weight: bold; font-size: 14px; margin-bottom: 8px; color: var(--navy); }
-        .form-control { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; font-family: inherit; }
-        .submit-btn {
-            width: 100%; padding: 16px; background-color: var(--navy); color: #fff; border: none; border-radius: 4px;
-            font-weight: bold; font-size: 16px; cursor: pointer; transition: 0.3s;
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-top: 100%; /* 高さの調整 */
+            overflow: hidden;
         }
-        .submit-btn:hover { background-color: #2c3e50; }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
 
         footer { background: #1a2a3a; color: #fff; text-align: center; padding: 30px; font-size: 13px; }
+
+        @media (max-width: 768px) {
+            :root { --header-height: 100px; }
+            .flex-box { flex-direction: column; }
+            .flex-box img { width: 100%; }
+        }
     </style>
 </head>
 <body>
@@ -184,8 +197,8 @@
     <header>
         <div class="header-container">
             <div class="header-top">
-                <div class="company-name">ル・クレア・プロプロパティマネジメント合同会社</div>
-                <div class="tagline">WEB面談・オンライン契約対応</div>
+                <h1 class="company-name">ル・クレア・プロパティマネジメント合同会社</h1>
+                <div class="tagline">八王子市追分町 | WEB面談・オンライン契約</div>
             </div>
             <nav class="header-nav">
                 <ul>
@@ -201,16 +214,16 @@
 
     <main>
         <section class="hero">
-            <h2>確かな管理で、資産の未来を創る。</h2>
+            <h2>八王子で築く、安心と信頼の不動産管理。</h2>
         </section>
 
         <section id="news" class="container">
             <h2 class="section-title">What's New</h2>
             <div class="flex-box">
-                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=600" alt="News">
-                <div>
-                    <p>【更新情報】</p>
-                    <p style="margin-top:10px; color:#666;">最新の物件情報や社内ニュースをお届けします。八王子市内の賃貸物件管理を強化しております。</p>
+                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=600" alt="オフィス風景">
+                <div class="flex-text">
+                    <p>【地域密着の不動産管理】</p>
+                    <p style="margin-top:10px; color:#666;">八王子市追分町を中心に、最新の物件情報やオーナー様向けニュースをお届けします。入居率向上と資産価値の維持に貢献いたします。</p>
                 </div>
             </div>
         </section>
@@ -218,14 +231,16 @@
         <section id="about" class="bg-light">
             <div class="container">
                 <h2 class="section-title">Company Profile</h2>
-                <div class="flex-box reverse">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600" alt="Office">
-                    <table>
-                        <tr><th>会社名</th><td>ル・クレア・プロパティマネジメント合同会社</td></tr>
-                        <tr><th>所在地</th><td>東京都八王子市追分町8番10号</td></tr>
-                        <tr><th>設立</th><td>2017年4月</td></tr>
-                        <tr><th>目的</th><td>不動産の所有、管理、利用及び賃貸借</td></tr>
-                    </table>
+                <div class="flex-box" style="flex-direction: row-reverse;">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600" alt="ル・クレア 会社概要イメージ">
+                    <div class="flex-text">
+                        <table>
+                            <tr><th>会社名</th><td>ル・クレア・プロパティマネジメント合同会社</td></tr>
+                            <tr><th>所在地</th><td>東京都八王子市追分町8番10号</td></tr>
+                            <tr><th>設立</th><td>2017年4月</td></tr>
+                            <tr><th>事業目的</th><td>不動産の所有、管理、利用及び賃貸借</td></tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </section>
@@ -233,15 +248,15 @@
         <section id="service" class="container">
             <h2 class="section-title">Business</h2>
             <div class="flex-box">
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600" alt="Business">
-                <div>
-                    <h3>賃貸管理業務</h3>
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600" alt="賃貸管理業務イメージ">
+                <div class="flex-text">
+                    <h3>プロパティマネジメント業務</h3>
                     <ul style="margin-left:20px; margin-top:10px;">
-                        <li>室内クリーニング</li>
-                        <li>新入居者の募集・内見案内</li>
-                        <li>契約等の入居までの各種業務</li>
-                        <li>物件清掃・修繕・相談対応</li>
-                        <li>各種業者との打ち合わせ</li>
+                        <li>室内クリーニング・原状回復工事</li>
+                        <li>新規入居者の募集・内見案内・審査</li>
+                        <li>賃貸借契約および更新事務全般</li>
+                        <li>物件の日常清掃・維持修繕・クレーム対応</li>
+                        <li>各種専門業者との折衝・打ち合わせ</li>
                     </ul>
                 </div>
             </div>
@@ -251,33 +266,30 @@
             <div class="container">
                 <h2 class="section-title">WEB Flow</h2>
                 <div class="grid-box">
-                    <div class="card"><img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=300" alt="Step 1"><p><b>01 お問い合わせ</b><br>WEB面談日時を調整</p></div>
-                    <div class="card"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=300" alt="Step 2"><p><b>02 WEB面談</b><br>ZOOM等でのご相談</p></div>
-                    <div class="card"><img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=300" alt="Step 3"><p><b>03 物件見学</b><br>現地またはオンライン</p></div>
-                    <div class="card"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=300" alt="Step 4"><p><b>04 契約締結</b><br>WEB上で手続き完了</p></div>
+                    <div class="card"><img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=300" alt="ステップ1"><p><b>01 お問い合わせ</b><br>ご相談・WEB面談予約</p></div>
+                    <div class="card"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=300" alt="ステップ2"><p><b>02 WEB面談</b><br>オンラインでの詳細相談</p></div>
+                    <div class="card"><img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=300" alt="ステップ3"><p><b>03 現地確認</b><br>物件見学（オンライン可）</p></div>
+                    <div class="card"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=300" alt="ステップ4"><p><b>04 契約完了</b><br>電子契約等での締結</p></div>
                 </div>
             </div>
         </section>
 
-		<section id="contact">
-		    <div class="container">
-		        <h2 class="section-title">Contact</h2>
-		        <div class="contact-form-wrapper" style="max-width: 800px; padding: 20px;">
-		            <p style="text-align:center; margin-bottom:30px; font-weight: bold;">WEB面談のご予約・管理のご相談</p>
-		            
-		            <div style="width: 100%; overflow: hidden;">
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-form-wrapper">
+                    <p style="margin-bottom:20px;"><b>WEB面談のご予約・管理のご相談</b></p>
+                    <div class="iframe-container">
 		                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScWguE9Cnia-Sx7UJijW6DxfGIBOpdA7QUAIPNUxIVYiFWnXQ/viewform?usp=dialog" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
-		                </div>
-		            
-		        </div>
-		    </div>
-		</section>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>Copyright &copy; 2026 ル・クレア・プロパティマネジメント合同会社</p>
+        <p>&copy; 2026 ル・クレア・プロパティマネジメント合同会社 - 八王子市追分町の賃貸管理</p>
     </footer>
 
 </body>
-
 </html>
